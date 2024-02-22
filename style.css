@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@600&display=swap');
+
+* {
+     /* font-family: "JetBrains Mono", monospace; */
+     font-family: "Kode Mono", monospace;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     flex-wrap: wrap;
+}
+
+html {
+     font-size: 62.5%;
+     /* 62.5% = 1rem = 10px */
+}
+
+body {
+     background-color: #0d1b2a;
+     display: flex;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     /* overflow: hidden; */
+}
+
+.container {
+     width: 90%;
+     position: relative;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+
+     /* justify-content: ; */
+}
+
+.heading {
+     width: 100%;
+     position: relative;
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     height: 20%;
+     flex-wrap: wrap;
+     justify-content: center;
+
+}
+
+#name {
+     align-self: flex-end;
+     font-size: 2rem;
+     color: azure;
+     text-align: center;
+     position: relative;
+     padding: 5px;
+     /* padding:2rem 3rem; */
+
+}
+
+#name::before {
+     content: '';
+     width: 100%;
+     height: 100%;
+     background-color: #e0e1dd;
+     position: absolute;
+     right: 0;
+     top: 0;
+     transition: width 0.5s ease-in-out;
+}
+
+#name.expand::before {
+     width: 0;
+}
+
+#page-title {
+     font-size: 5rem;
+     height: max-content;
+     width: max-content;
+     padding: 5px;
+     text-align: center;
+     line-height: normal;
+     color: #e0e1dd;
+     position: relative;
+     overflow: hidden;
+}
+
+#page-title::before {
+     content: '';
+     width: 100%;
+     height: 100%;
+     background-color: #e0e1dd;
+     position: absolute;
+     left: 0;
+     top: 0;
+     transition: width 0.5s ease-in-out;
+}
+
+#page-title.expand::before {
+     width: 0;
+}
+
+.game {
+     width: 100%;
+     height: 20%;
+     display: flex;
+     margin-top: 5rem;
+     flex-direction: column;
+     gap: 10px;
+}
+
+#game-mode {
+     color: white;
+     font-size: 3.5rem;
+     width: max-content;
+     height: max-content;
+     position: relative;
+}
+#game-mode::before{
+     content: '';
+     width:100%;
+     position: absolute;
+     height: 100%;
+     background-color: #e0e1dd;
+     transition: width 0.5s ease-in-out;
+
+}
+#game-mode.expand::before{
+     width:0;
+}
+
+.game .buttons {
+     display: flex;
+     gap: 2rem;
+}
+
+.game .buttons button {
+     padding: 10px;
+     border-radius: 0.5rem;
+     border: 2px solid none;
+     outline: none;
+     background-color: #e0e1dd;
+     transition: background-color 0.3s ease-out;
+}
+
+.game .buttons button:hover {
+     background-color: #0d1b2a;
+     border: 2px solid #e0e1dd;
+     color: #e0e1dd;
+     cursor: pointer;
+     transition: background-color 0.3s ease-in;
+}
+
