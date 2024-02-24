@@ -269,7 +269,8 @@ body {
      height: max-content;
      padding:0.5rem;
      display: flex;
-     justify-self: left;
+     justify-self: center;
      opacity: 0;
+     transition: opacity 0.2s ease-in;
 
 }
