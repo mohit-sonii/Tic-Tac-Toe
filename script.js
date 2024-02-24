@@ -101,6 +101,7 @@ Array.from(buttons).forEach((e) => {
                }
                turn0 = false;
           } else {
+
                e.innerHTML = "X"
                e.style.color = "#fff"
                turn0 = true;
